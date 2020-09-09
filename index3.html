@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<title>Arduino Modules</title>
+		<header class="header">KY-017 MERCURY TILT SWITCH MODULE</header>
+	</head>
+<body>
+	<table>
+	<td><img src="5.png" width="400" height="350"></td>
+	</table>
+	
+	<table class="table1">
+	<td><img src="6.png" width="500" height="350"></td>
+	</table>
+	
+	<table class="table2">
+	<tr>
+		<td>Arduino KY-017 mercury tilt switch module, it uses a small mercury ball 
+		that completes the circuit when you tilt the module. 
+		This module consists of a mercury switch, a 680Ω resistor and a LED 
+		that will light up when tilt is detected.
+		The mercury ball will open/close the circuit when the module is rotated.
+		</td>
+	</tr>
+	</table>
+	
+		<table class="table3">
+	<tr>
+		<td>
+			<h1>Code</h1>
+	int led_pin = 13; // Define the LED interface </br>
+	int switch_pin = 3; // Definition of mercury tilt switch sensor interface</br>
+	int val; // Defines a numeric variable</br>
+</br>
+	void setup()</br>
+	{</br>
+	pinMode(led_pin, OUTPUT);</br>
+	pinMode(switch_pin, INPUT);</br>
+	}</br>
+</br>
+	void loop()</br>
+	{</br>
+	val = digitalRead(switch_pin); // check mercury switch state</br>
+	if(val == HIGH)</br>
+	{</br>
+		digitalWrite(led_pin, HIGH);</br>
+	}</br>
+	else</br>
+	{</br>
+		digitalWrite(led_pin, LOW);</br>
+	}</br>
+	}</br>
+		</td>
+	</tr>
+	</table>
+	<table class="table4">
+	<tr>
+	<td>
+		<a href="https://iljatsapkov.github.io/Arduino-Modul1/">Первый Модуль</a>
+		<a href="https://arduinomodules.info/ky-010-photo-interrupter-module/">Source</a>
+	</td>
+	</tr>
+	</table>
+</body>
+</html>
